@@ -22,8 +22,7 @@ export function OnClick(e){
     const LAST_INDEX = SERIAL_DATA.length - 1
     let IMG_MAIN_VIEW_INNER_VIEW = document.querySelector(`.image-main-view > img`)
     
-    console.log(SERIAL_DATA[LAST_INDEX])
-
+    
     if (e.target.className.startsWith('img')){
         const INDEX_TO_FIND = SERIAL_DATA[LAST_INDEX]
         let TV = DATA_DICT.TVS.filter(tv => tv.serialNumber == INDEX_TO_FIND)[0]
@@ -36,23 +35,17 @@ export function OnClick(e){
         const SERIAL_INNER_VIEW_DATA = IMG_MAIN_VIEW_INNER_VIEW.className.split('-')
         const SERIAL_INNER_VIEW = SERIAL_INNER_VIEW_DATA[SERIAL_INNER_VIEW_DATA.length - 1]
         
-        console.log("currentViewIMG", IMG_MAIN_VIEW_INNER_VIEW)
         let NEXT_TV_IN_LINE = DATA_DICT.TVS.map((tv, i, arr) => {
             
                 if (tv.serialNumber == SERIAL_INNER_VIEW){
                     let index = (direction == 'left')? 
                         (i-1>-1)?i-1:DATA_DICT.TVS.length - 1 : (i+1<DATA_DICT.TVS.length)?i+1:0
 
-                    console.log('SERIAL_INNER_VIEW', SERIAL_INNER_VIEW)
-                    console.log('correctINDEX', index)
-                    console.log('XXXXX', arr[index])
                     let ex = arr[index]
                     return ex
                 }
             }
         ).filter(tv => tv)[0]
-
-        console.log("nextViewIMG", NEXT_TV_IN_LINE.imgUrl)
         
         IMG_MAIN_VIEW_INNER_VIEW.src = NEXT_TV_IN_LINE.imgUrl
         IMG_MAIN_VIEW_INNER_VIEW.className = `image-main-view-${NEXT_TV_IN_LINE.serialNumber}`

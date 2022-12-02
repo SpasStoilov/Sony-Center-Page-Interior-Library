@@ -167,16 +167,11 @@ export function change(data){
 }
 
 
-
-//Trash:
-
-// export function copy(data) {
-//     return JSON.parse(JSON.stringify(data))
-// }
+export function copy(data) {
+    return JSON.parse(JSON.stringify(data))
+}
 
 // export function referTo(ref) {
 //     return `(() => ${ref})()`
 // }
 
-// {evnt: "mouseover", evntFunc: Interior.referTo(Event.OnMouseover)},
-// {evnt: "mouseout", evntFunc: Interior.referTo(Event.OnMouseout)}

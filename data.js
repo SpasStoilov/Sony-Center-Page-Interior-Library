@@ -56,14 +56,5 @@ export const DATA_DICT = {
             currency: 'евро',
             imgUrl:'https://d3fa68hw0m2vcc.cloudfront.net/bf9/248305513.jpeg'
         },
-        {
-            header: 'Телевизор Phylips Bravia XR MASTER Series A90J 65',
-            subHeader: 'A90J | Bravia Xr',
-            serialNumber: '6',
-            inStock: false,
-            price: '4 000 лв',
-            currency: 'лв',
-            imgUrl:'https://d3fa68hw0m2vcc.cloudfront.net/bf9/248305513.jpeg'
-        }
     ]
 }

@@ -244,14 +244,39 @@ export let INFORMATION_HOLDER_PROTECT_TV_POST = [
     {
         typeName:'div',
         className: 'information-holder-protect-tv-post',
-        textContent:"Защитете техниката си с удължена гаранция", 
+        textContent:[
+            {
+                typeName: 'p',
+                textContent: "Защитете техниката си с удължена гаранция",
+                className: 'information-holder-protect-tv-text',
+                style: {
+                    fontFamily: 'Gill Sans, sans-serif',
+                    marginLeft: '20px',
+                    padding: '0px'
+                }
+            },
+            {
+                typeName: 'a',
+                textContent: 'Виж повече',
+                className: 'information-holder-protect-tv-seemore',
+                href: '#lookmore',
+                style: {
+                    fontFamily: 'Gill Sans, sans-serif',
+                    marginRight: '20px',
+                    padding: '0px',
+                    color: '#e5b43d',
+                    // textDecoration: 'underline'
+                }
+            },
+        ], 
         style:{
-            textIndent: '50px',
+            display: 'inline-flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
             color: '#e5b43d',
             background: 'linear-gradient(to right, #0a212d, #294b5d)',
-            padding: '16px 0px 16px 0px',
             fontFamily: 'Gill Sans, sans-serif',
-            fontSize: '13px'
+            fontSize: '13px',
         },
 
     }
@@ -275,7 +300,7 @@ export let INFORMATION_HOLDER_ADD_TV = [
         ], 
         style:{
             width: '400px',
-            height: '50px',
+            height: '52px',
             color: 'white',
             backgroundColor: '#0a212d',
             fontFamily: 'Gill Sans, sans-serif',
@@ -284,7 +309,57 @@ export let INFORMATION_HOLDER_ADD_TV = [
             marginTop: '15px',
             display: 'inline-flex',
             justifyContent: 'center',
-            alignItems: 'center'
+            alignItems: 'center',
+            
+        },
+
+    }
+]
+
+export let INFORMATION_HOLDER_CREDIT_ADD = [
+    {
+        typeName:'div',
+        className: 'information-holder-credit-add',
+        textContent:[
+            {
+                typeName: 'p',
+                textContent: [
+                    `Купи с кредит от `,
+                    {
+                        typeName: 'span',
+                        textContent: "TBIBank",
+                        style: {
+                            color: '#e5ab00'
+                        }
+                    },
+                    ` на`,
+                ],
+                style: {
+                    margin: '0px'
+                }
+            },
+            {
+                typeName: 'p',
+                textContent: "12 вноски по 468,72 лв.",
+                style: {
+                    margin: '0px'
+                }
+            },
+           
+        ], 
+        style:{
+            display: 'inline-flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
+            width: '400px',
+            height: '50px',
+            fontFamily: 'Gill Sans, sans-serif',
+            fontSize: '13px',
+            marginTop: '15px',
+            border: '2px solid #e5ab00',
+            overflow: 'hidden',
+            fontWeight: 'bold'
         },
 
     }
@@ -311,7 +386,17 @@ export let INFORMATION_HOLDER = [
             ...INFORMATION_HOLDER_PRICE,
             ...INFORMATION_HOLDER_DELIVERY,
             ...INFORMATION_HOLDER_PROTECT_TV_POST,
-            ...INFORMATION_HOLDER_ADD_TV
+            {
+                typeName: 'div',
+                textContent:[
+                    ...INFORMATION_HOLDER_ADD_TV,
+                    ...INFORMATION_HOLDER_CREDIT_ADD
+                ],
+                style: {
+                    display: 'inline-flex',
+                    justifyContent: 'space-between'
+                }
+            }
         ]
 
     }
@@ -434,6 +519,7 @@ export let NAV_OPTIONS = [
             paddingLeft: '20px',
         }
     },
+
     {
         typeName: "input",
         type: 'search',
@@ -447,9 +533,11 @@ export let NAV_OPTIONS = [
             border: 'none',
             borderBottom: "2px solid #3d4265",
             flex: '1',
-            margin: '0 200px 0 200px'
+            margin: '0 200px 0 200px',
+            fontSize: '17px'
         }
     },
+
     {
         typeName: "div",
         className:"nav-cinema-tel-call",
@@ -484,12 +572,14 @@ export let NAV_OPTIONS = [
         },
         href: "#cinema"
     },
+
     {
         typeName: 'div',
         className: 'nav-cinema-tel-profile-button',
         textContent:[
             {
                 typeName: 'img',
+                className: 'image-main-profile-img',
                 src:  'user-profile-icon-free-vector.png',
                 style: {
                     width:'50px',
@@ -508,12 +598,14 @@ export let NAV_OPTIONS = [
             alignItems: 'center'
         }
     },
+
     {
         typeName: 'div',
         className: 'nav-cinema-tel-purches-button',
         textContent:[
             {
                 typeName: 'img',
+                className: 'image-main-shopping-car',
                 src:  'shopping-car.png',
                 style: {
                     width:'30px',
