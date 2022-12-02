@@ -98,7 +98,7 @@ export let IMG_MAIN_VIEW = [
             display: 'inline-flex',
             justifyContent: 'center',
             alignItems: 'center',
-            // backgroundColor: '#e5e8ed',
+            //backgroundColor: '#e5e8ed',
             marginLeft: '10px',
         },
         textContent:[
