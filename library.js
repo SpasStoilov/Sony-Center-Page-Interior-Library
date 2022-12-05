@@ -506,7 +506,6 @@ export let SUB_NAVBAR = [
 
 ];
 
-
 export let NAV_OPTIONS = [
     {
         typeName: "lable",
