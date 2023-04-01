@@ -14,7 +14,7 @@ let Interior = {
     NAVBAR:lb.NAVBAR,
     SUB_NAVBAR:lb.SUB_NAVBAR,
 
-    //Some times we do not need all info from global CTX so, we need to def what part of the global contex a component must use:
+    //Some times we do not need all info from global CTX, do we need to define what part of the global context a component must use:
     mainCTX: {
         name:"main",
         to:"body",
@@ -35,7 +35,7 @@ let Interior = {
     start(){
 
         // We use arrow function when we need our component to use the global CTX
-        // We use function expression when we need our component to use particilura part of the global CTX.
+        // We use function expression when we need our component to use particular part of the global CTX.
 
         (   //Application component:
             this.app = () => {
@@ -54,7 +54,7 @@ let Interior = {
 
                 (   //Main component:
                     this.main = function(){
-                        
+
                         //first we must stage Parent, then its children:
                         this.stgAt(this.to, this.MAIN);
 
